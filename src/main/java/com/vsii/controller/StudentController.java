@@ -52,7 +52,7 @@ public class StudentController {
         studentNew.get().setAge(student.getAge());
         studentService.save(studentNew.get());
 
-        return new ResponseEntity<>(student, HttpStatus.OK);
+        return new ResponseEntity<>(studentNew, HttpStatus.OK);
     }
 
     @DeleteMapping("/{id}")

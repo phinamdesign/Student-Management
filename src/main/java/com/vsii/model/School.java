@@ -6,7 +6,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Student {
+public class School {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -14,14 +14,11 @@ public class Student {
 
     private String name;
 
-    private Long age;
-
-    public Student() {
+    public School() {
     }
 
-    public Student(String name, Long age) {
+    public School(String name) {
         this.name = name;
-        this.age = age;
     }
 
     public Long getId() {
@@ -38,13 +35,5 @@ public class Student {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public Long getAge() {
-        return age;
-    }
-
-    public void setAge(Long age) {
-        this.age = age;
     }
 }
